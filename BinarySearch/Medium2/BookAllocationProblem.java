@@ -28,6 +28,10 @@ public class BookAllocationProblem {
     public static int findPagesOptimize(int[] nums, int m) {
         int max = nums[0];
         int sum = 0;
+        int n = nums.length;
+
+        if (m > n)
+            return -1;
 
         for (int i = 0; i < nums.length; i++) {
             max = Math.max(max, nums[i]);
